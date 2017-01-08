@@ -147,7 +147,124 @@ public class BDHorario extends SQLiteOpenHelper{
         nuevoRegistro.put("PROF", "Jorge");
         db.insert("HORARIO", null, nuevoRegistro);
 
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 14);
+        nuevoRegistro.put("COD_ASIGNATURA", "M07");
+        nuevoRegistro.put("HORA_INICIO","15:00:00");
+        nuevoRegistro.put("HORA_FIN", "18:00:00");
+        nuevoRegistro.put("DIA", "Lunes");
+        nuevoRegistro.put("PROF", "Leo");
+        db.insert("HORARIO", null, nuevoRegistro);
 
+        //ContentValues nuevoRegistro = new ContentValues();
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 15);
+        nuevoRegistro.put("COD_ASIGNATURA", "M03");
+        nuevoRegistro.put("HORA_INICIO","15:00:00");
+        nuevoRegistro.put("HORA_FIN", "17:00:00");
+        nuevoRegistro.put("DIA", "Martes");
+        nuevoRegistro.put("PROF", "Josefa");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        //ContentValues nuevoRegistro = new ContentValues();
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 16);
+        nuevoRegistro.put("COD_ASIGNATURA", "M10");
+        nuevoRegistro.put("HORA_INICIO","17:00:00");
+        nuevoRegistro.put("HORA_FIN", "19:20:00");
+        nuevoRegistro.put("DIA", "Martes");
+        nuevoRegistro.put("PROF", "Marta");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 17);
+        nuevoRegistro.put("COD_ASIGNATURA", "M05");
+        nuevoRegistro.put("HORA_INICIO","19:20:00");
+        nuevoRegistro.put("HORA_FIN", "21:20:00");
+        nuevoRegistro.put("DIA", "Martes");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 18);
+        nuevoRegistro.put("COD_ASIGNATURA", "M09");
+        nuevoRegistro.put("HORA_INICIO","16:00:00");
+        nuevoRegistro.put("HORA_FIN", "18:00:00");
+        nuevoRegistro.put("DIA", "Miercoles");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 19);
+        nuevoRegistro.put("COD_ASIGNATURA", "M05");
+        nuevoRegistro.put("HORA_INICIO","18:20:00");
+        nuevoRegistro.put("HORA_FIN", "19:20:00");
+        nuevoRegistro.put("DIA", "Miercoles");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 20);
+        nuevoRegistro.put("COD_ASIGNATURA", "M03");
+        nuevoRegistro.put("HORA_INICIO","19:20:00");
+        nuevoRegistro.put("HORA_FIN", "21:20:00");
+        nuevoRegistro.put("DIA", "Miercoles");
+        nuevoRegistro.put("PROF", "Josefa");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 22);
+        nuevoRegistro.put("COD_ASIGNATURA", "M09");
+        nuevoRegistro.put("HORA_INICIO","15:00:00");
+        nuevoRegistro.put("HORA_FIN", "16:00:00");
+        nuevoRegistro.put("DIA", "Jueves");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 23);
+        nuevoRegistro.put("COD_ASIGNATURA", "M08");
+        nuevoRegistro.put("HORA_INICIO","16:00:00");
+        nuevoRegistro.put("HORA_FIN", "18:00:00");
+        nuevoRegistro.put("DIA", "Jueves");
+        nuevoRegistro.put("PROF", "Lluis");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 24);
+        nuevoRegistro.put("COD_ASIGNATURA", "M08");
+        nuevoRegistro.put("HORA_INICIO","18:20:00");
+        nuevoRegistro.put("HORA_FIN", "21:20:00");
+        nuevoRegistro.put("DIA", "Jueves");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 25);
+        nuevoRegistro.put("COD_ASIGNATURA", "M10");
+        nuevoRegistro.put("HORA_INICIO","15:00:00");
+        nuevoRegistro.put("HORA_FIN", "17:00:00");
+        nuevoRegistro.put("DIA", "Viernes");
+        nuevoRegistro.put("PROF", "Marta");
+        db.insert("HORARIO", null, nuevoRegistro);
+
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 26);
+        nuevoRegistro.put("COD_ASIGNATURA", "M08");
+        nuevoRegistro.put("HORA_INICIO","17:00:00");
+        nuevoRegistro.put("HORA_FIN", "19:20:00");
+        nuevoRegistro.put("DIA", "Viernes");
+        nuevoRegistro.put("PROF", "Lluis");
+        db.insert("HORARIO", null, nuevoRegistro);
+        
+        nuevoRegistro.put("GRUPO", "A1");
+        nuevoRegistro.put("ID_HORARIO", 27);
+        nuevoRegistro.put("COD_ASIGNATURA", "M05");
+        nuevoRegistro.put("HORA_INICIO","19:20:00");
+        nuevoRegistro.put("HORA_FIN", "21:20:00");
+        nuevoRegistro.put("DIA", "Viernes");
+        nuevoRegistro.put("PROF", "Jorge");
+        db.insert("HORARIO", null, nuevoRegistro);
 
     }
 
