@@ -7,33 +7,58 @@
     tools:context="com.example.joana.horarioapp.prefer">
 
     <TextView
-        android:text="En que clase estas?"
+        android:text="Elije el subgrupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView2" />
 
-    <RadioGroup
-        android:layout_width="156px"
-        android:layout_height="156px"
-        android:id="@+id/grupobtn"
-        >
-    <RadioButton
-        android:text="A1"
+    <Spinner
+        android:id="@+id/spinner"
+        android:entries="@array/subgrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewGroup"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Color de Fondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="72dp"
+        android:id="@+id/textViewColor" />
+
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioButton" />
-
-    <RadioButton
-        android:text="A2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton2" />
-
-    </RadioGroup>
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/spinner1"
+        android:layout_toEndOf="@+id/textViewTitle"
+        android:entries="@array/color"
+        android:layout_toRightOf="@+id/textViewTitle" />
 
     <Button
-        android:text="Enviar!"
-        android:layout_width="match_parent"
+        android:text="Aplicar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:layout_marginBottom="29dp"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/textViewGroup"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif" />
+
 </LinearLayout>

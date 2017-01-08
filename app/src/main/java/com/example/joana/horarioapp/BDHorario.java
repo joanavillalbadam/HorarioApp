@@ -12,8 +12,9 @@ import android.widget.TextView;
 
 public class BDHorario extends SQLiteOpenHelper{
 
+    //hacemos la tabla horario
     String sqlCreate = "CREATE TABLE HORARIO (GRUPO TEXT, ID_HORARIO INTEGER , COD_ASIGNATURA TEXT, HORA_INICIO TEXT, HORA_FIN TEXT, DIA INTEGER, PROF TEXT)";
-    //  String sqlInsert = "INSERT INTO HORARIO (GRUPO,ID_HORARIO,COD_ASIGNATURA, HORA_INICIO, HORA_FIN, DIA) VALUES('A2',1,'M07',15:00:00,18:00:00,'Lunes')";
+
     public BDHorario(Context contexto, String nombre,
                                 SQLiteDatabase.CursorFactory factory, int version) {
         super(contexto, nombre, factory, version);
@@ -23,14 +24,9 @@ public class BDHorario extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         //Se ejecuta la sentencia SQL de creacion de la tabla
         db.execSQL(sqlCreate);
-       // db.execSQL(sqlCreate2);
 
 
-       // BDHorario usdbh =
-               // new BDHorario(this,this, null, 1);
-
-        //db = usdbh.getWritableDatabase();
-
+    //Hacemos los inserts necesarios
         ContentValues nuevoRegistro = new ContentValues();
         nuevoRegistro.put("GRUPO", "A2");
         nuevoRegistro.put("ID_HORARIO", 1);
@@ -151,7 +147,6 @@ public class BDHorario extends SQLiteOpenHelper{
         nuevoRegistro.put("PROF", "Jorge");
         db.insert("HORARIO", null, nuevoRegistro);
 
-        //   db.execSQL(sqlInsert);
 
 
     }

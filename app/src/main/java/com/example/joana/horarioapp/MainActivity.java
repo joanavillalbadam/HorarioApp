@@ -1,9 +1,13 @@
 package com.example.joana.horarioapp;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,9 +22,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-        //recoje la dificultad desde el intent
-        String s = intent.getStringExtra("clase");
+        //
+        SharedPreferences prefs =
+                getSharedPreferences("HorarioApp", Context.MODE_PRIVATE);
+
+        String color = prefs.getString("color", "Blanco");
+        String grupo = prefs.getString("grupo", "A1");
+
+
+       switch (color)
+        {
+            case "Blanco":
+                findViewById(R.id.activity_main).setBackgroundColor(Color.WHITE);
+                break;
+            case "Amarillo":
+                findViewById(R.id.activity_main).setBackgroundColor(Color.YELLOW);
+                break;
+            case "Verde" :
+                findViewById(R.id.activity_main).setBackgroundColor(Color.GREEN);
+                break;
+        }
+
 
         TextView txtResultado = (TextView)findViewById(R.id.txtResultado);
       //  txtResultado.setText("esto es una prueba" + s);
@@ -54,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
                 diasem = "viernes";
                 break;
         }
-
       //  if (s == "A1") {
             //Hacemos un select con
-            Cursor c = db.rawQuery("SELECT COD_ASIGNATURA, HORA_INICIO, HORA_FIN, PROF FROM HORARIO Where ('" + hora + ":" + minut + "' BETWEEN HORA_INICIO AND HORA_FIN) AND (DIA = '" + diasem + "') AND (GRUPO = '"+s+"')", null);
+            Cursor c = db.rawQuery("SELECT COD_ASIGNATURA, HORA_INICIO, HORA_FIN, PROF FROM HORARIO Where " +
+                    "('" + hora + ":" + minut + "' BETWEEN HORA_INICIO AND HORA_FIN) AND (DIA = '" + diasem + "') AND (GRUPO = '"+grupo+"')", null);
 
             txtResultado.setText("");
             if (c.moveToFirst()) {
@@ -71,23 +93,5 @@ public class MainActivity extends AppCompatActivity {
                     txtResultado.append(" ahora toca: " + cod + "\n Profesor: " + prof + " \n desde las: " + horini + "\n hasta las: " + horfin + "\n");
                 } while (c.moveToNext());
             }
-       /* } else if (s == "A2") {
-
-            //Hacemos un select con
-            Cursor c = db.rawQuery("SELECT COD_ASIGNATURA, HORA_INICIO, HORA_FIN, PROF FROM HORARIO Where ('" + hora + ":" + minut + "' BETWEEN HORA_INICIO AND HORA_FIN) AND (DIA = '" + diasem + "')", null);
-
-            txtResultado.setText("");
-            if (c.moveToFirst()) {
-                //Recorremos el cursor hasta que no haya mas registros
-                do {
-                    String cod = c.getString(0);
-                    String horini = c.getString(1);
-                    String horfin = c.getString(2);
-                    String prof = c.getString(3);
-
-                    txtResultado.append(" ahora toca: " + cod + "\n Profesor: " + prof + " \n desde las: " + horini + "\n hasta las: " + horfin + "\n");
-                } while (c.moveToNext());
-            }
-        }*/
     }
     }
