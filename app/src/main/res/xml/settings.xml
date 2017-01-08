@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="numArticulos"
+        android:title="@string/pref_numArticulos_titulo"
+        android:defaultValue="6"
+        android:entries="@array/pref_numArticulos_entradas"
+        android:entryValues="@array/pref_numArticulos_valores"
+        android:summary="@string/pref_numArticulos_resumen" />
+
+</PreferenceScreen>
